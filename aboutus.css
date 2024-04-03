@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-color: #4f4caf; */
+    align-items: center;
+    justify-content: center;
+    /* height: 1000px; */
+    background-repeat: no-repeat;
+    background-image: url(ocean_2.jpeg);
+    background-size: cover;
+    animation: transitionIn  0.75s;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 20px;
+    /* background-color: black; */
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: o 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h1, p {
+    text-align: center;
+}
+
+a {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Adjust as needed */
+}

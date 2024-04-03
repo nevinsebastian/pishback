@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    /* background-color: #4f4caf; */
+    align-items: center;
+    justify-content: center;
+    /* height: 1000px; */
+    background-repeat: no-repeat;
+    background-image: url(ocean_2.jpeg);
+    background-size: cover;
+    animation: transitionIn  0.75s;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 20px;
+    /* background-color: black; */
+}
+
+button {
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #4f4caf; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 10px;
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    /* position: absolute; */
+   
+}
+input{
+    /* position: absolute; */
+    width: 75%;
+    padding: 0.4px;
+    font-size: 1.5em;
+    line-height: 45px;
+    color: aliceblue; 
+    border: 2px solid rgb(248, 245, 245);
+    background: transparent;
+    border-radius: 10px;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: o 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a {
+    position: absolute;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Adjust as needed */
+}
