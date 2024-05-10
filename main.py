@@ -7,36 +7,27 @@ from sklearn.linear_model import LogisticRegression
 import re
 from tokenizer import makeTokens  
 
-# Read phishing URLs data
 phish_data = pd.read_csv("datasets/verified_online.csv")
 phish_urls = phish_data.sample(n=5000, random_state=12).copy().reset_index(drop=True)
 
-# Read legitimate URLs data
 legit_data = pd.read_csv("datasets/Benign_url_file.csv")
 legit_data.columns = ['URLs']
 
-# Combine phishing and legitimate URLs
 combined_data = pd.concat([phish_urls, legit_data], ignore_index=True)
 combined_data['Label'] = [1] * len(phish_urls) + [0] * len(legit_data)
 combined_data = combined_data.sample(frac=1, random_state=42).reset_index(drop=True)
 
-# Handle NaN values
 combined_data['URLs'].fillna('', inplace=True)
 
-# Split data into features and labels
 X_train = combined_data['URLs']
 y_train = combined_data['Label']
 
-# Initialize CountVectorizer
 vectorizer = CountVectorizer(tokenizer=makeTokens, token_pattern=None)
 
-# Transform features
 X_train_transformed = vectorizer.fit_transform(X_train)
 
-# Initialize Logistic Regression model
 logit = LogisticRegression()
 
-# Train the model
 logit.fit(X_train_transformed, y_train)
 
 
